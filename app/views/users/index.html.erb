@@ -5,4 +5,5 @@
 <% @users.each do |user| %>
     <p><%= user.firstname %></p>
     <p><%= user.lastname %></p>
+    <a href="/users/<%= user.id %>" class="btn btn-primary">Show</a>
 <%end%>
