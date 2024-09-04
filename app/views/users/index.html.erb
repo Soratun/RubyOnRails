@@ -1,0 +1,8 @@
+<p>All User</p>
+
+<%= link_to 'Create New User', new_user_path, class: 'btn btn-primary' %>
+
+<% @users.each do |user| %>
+    <p><%= user.firstname %></p>
+    <p><%= user.lastname %></p>
+<%end%>
