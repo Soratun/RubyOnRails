@@ -1,0 +1,49 @@
+ <div class="card">
+      <div class="box">
+        <h1>Register Form</h1>
+        <%= form_with(model: @user, local: true) do |form| %>
+          <div class="rowName">
+            <div>
+              <%= form.label :firstname, "First Name" %>
+              <%= form.text_field :firstname, required: true %>
+            </div>
+            <div>
+              <%= form.label :lastname, "Last Name" %>
+              <%= form.text_field :lastname, required: true %>
+            </div>
+          </div>
+          <div class="rowBirth">
+            <div class="BirthDate">
+              <%= form.label :birthday, "Birth Date" %>
+              <%= form.date_field :birthday, required: true %>
+            </div>
+            <div class="Gender">
+              <%= form.label :gender, "Gender" %>
+              <div>
+                <%= form.radio_button :gender, 'Male', id: 'Male', required: true %>
+                <%= form.label :gender, "Male", value: 'Male', for: 'Male' %>
+                <%= form.radio_button :gender, 'Female', id: 'Female', required: true %>
+                <%= form.label :gender, "Female", value: 'Female', for: 'Female' %>
+              </div>
+            </div>
+          </div>
+          <div class="rowEmail">
+            <div>
+              <%= form.label :email, "Email" %>
+              <%= form.email_field :email, required: true %>
+            </div>
+            <div>
+              <%= form.label :phonenumber, "Phone Number" %>
+              <%= form.telephone_field :phonenumber, required: true %>
+            </div>
+          </div>
+          <div class="Subject">
+            <%= form.label :subject, "Subject" %>
+            <%= form.select :subject, options_for_select([['Choose option', ''], ['HTML', 'HTML'], ['CSS', 'CSS'], ['JS', 'JS']]), {}, required: true %>
+          </div>
+          <div>
+            <%= form.submit 'Submit' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
