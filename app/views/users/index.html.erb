@@ -6,4 +6,5 @@
     <p><%= user.firstname %></p>
     <p><%= user.lastname %></p>
     <a href="/users/<%= user.id %>" class="btn btn-primary">Show</a>
+    <%= link_to "edit", edit_user_path(user.id) %>
 <%end%>

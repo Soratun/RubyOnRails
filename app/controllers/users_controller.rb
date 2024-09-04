@@ -30,6 +30,7 @@ class UsersController < ApplicationController
         else
             render :edit
         end
+    end
     private
     def user_params
         params.require(:user).permit(:firstname, :lastname, :birthday, :gender, :email, :phonenumber, :subject)
