@@ -42,9 +42,9 @@
             <%= form.select :subject, options_for_select([['Choose option', ''], ['HTML', 'HTML'], ['CSS', 'CSS'], ['JS', 'JS']]), {}, required: true %>
           </div>
           <div>
-            <%= form.submit 'Submit' %>
+            <%= form.submit 'Submit' ,class: 'btu'%>
           </div>
         <% end %>
-        <%= link_to 'Back', root_path, class: 'btn btn-secondary' %>
+        <%= button_to 'Back', root_path, method: :get, class: ' Back' %>
       </div>
     </div>
