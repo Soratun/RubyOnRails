@@ -1,2 +1,26 @@
-<%= link_to 'Back', root_path, class: 'btn btn-secondary' %>
-<h1><%= @user.firstname %></h1>
+<%= stylesheet_link_tag "show", "data-turbo-track": "reload" %>
+<div class="container-show">
+    <div class="detail">
+        <div>
+            <h1>Name :</h1>
+            <h1>Birthday :</h1>
+            <h1>Gender :</h1>
+            <h1>Mail :</h1>
+            <h1>PhoneNumber :</h1>
+            <h1>Subject :</h1>
+        </div>
+        <div>
+            <div class="name">
+                <h1><%= @user.firstname %></h1>
+                <h1><%= @user.lastname %></h1>
+            </div>
+            <h1><%= @user.birthday %></h1>
+            <h1><%= @user.gender %></h1>
+            <h1><%= @user.email %></h1>
+            <h1><%= @user.phonenumber %></h1>
+            <h1><%= @user.subject %></h1>
+        </div>
+    </div>
+    <%= button_to 'Back', root_path, method: :get , class: 'Back' %>
+</div>
+

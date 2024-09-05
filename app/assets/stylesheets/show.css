@@ -1,0 +1,22 @@
+.container-show{
+    background-color: white;
+    width: 50rem;
+    border-radius: 8px;
+    padding: 1rem;
+}
+.detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 1rem;
+
+    div h1{
+        text-align: start;
+    }
+    .name{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
