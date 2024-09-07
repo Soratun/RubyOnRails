@@ -32,6 +32,7 @@ jobs:
           bundle exec rspec 
         
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 
