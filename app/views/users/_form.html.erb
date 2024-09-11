@@ -22,7 +22,7 @@
           <div class="rowBirth">
             <div class="BirthDate">
               <%= form.label :birthday, "Birth Date" %>
-              <%= form.date_field :birthday %>
+              <%= form.date_field :birthday , max: 18.years.ago.to_date%>
               <% @user.errors[:birthday].each do |message| %>
                 <div class="error-message"><%= message %></div>
               <% end %>
