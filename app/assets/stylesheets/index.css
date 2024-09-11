@@ -17,25 +17,26 @@ h1{
 .user-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 15px;
+    /* border-spacing: 0 15px; */
     border-radius: 10px; 
     overflow: hidden; 
     animation: fadeIn 1s ease-in-out forwards; 
+    margin-top: 30px;
 
     th , td {
         padding: 12px;
-        background-color: #70ff40;
+        /* background-color: #70ff40; */
         border-bottom: 1px solid #ddd;
         text-align: center;
         vertical-align: middle;
     }
 
-    th:first-child {
+    /* th:first-child {
         border-top-left-radius: 10px;
     }
     th:last-child {
         border-top-right-radius: 10px;
-    }
+    } */
 }
 
 @keyframes fadeIn {
