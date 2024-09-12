@@ -37,6 +37,11 @@ class UsersController < ApplicationController
         @user.destroy
         redirect_to root_path
     end
+
+    def confirm_destroy
+        @user = User.find(params[:id])
+        render partial: 'confirm_destroy'
+      end
     private
     def user_params
         params.require(:user).permit(:firstname, :lastname, :birthday, :gender, :email, :phonenumber, :subject)

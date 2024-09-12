@@ -1,0 +1,18 @@
+<turbo-frame id="modal_frame" data-controller="modal">
+  <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirm Delete</h5>
+          <button type="button" class="btn-close" aria-label="Close" data-action="click->modal#close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete <%= @user.firstname %> <%= @user.lastname %>?</p>
+        </div>
+        <div class="modal-footer">
+          <%= button_to 'Delete', @user, method: :delete, data: { turbo_frame: '_top', action: 'modal#success' }, class: 'btn btn-danger' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</turbo-frame>
