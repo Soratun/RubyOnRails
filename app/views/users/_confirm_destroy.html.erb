@@ -11,6 +11,7 @@
         </div>
         <div class="modal-footer">
           <%= button_to 'Delete', @user, method: :delete, data: { turbo_frame: '_top', action: 'modal#success' }, class: 'btn btn-danger' %>
+          <%= button_to 'Cancel', '#', method: :get ,data: {action: 'modal#close'}, class: 'btn btn-secondary' %>
         </div>
       </div>
     </div>
